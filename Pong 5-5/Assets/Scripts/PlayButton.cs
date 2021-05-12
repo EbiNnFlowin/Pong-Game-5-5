@@ -7,6 +7,10 @@ public class PlayButton : MonoBehaviour
 {
     public void PlayGame()
     {
-        Debug.Log("Play game was pressed"); 
+        Debug.Log("Play game was pressed");
+
+        //Moves us to the Game scene
+        SceneManager.LoadScene("Game");
+        
     }
 }
