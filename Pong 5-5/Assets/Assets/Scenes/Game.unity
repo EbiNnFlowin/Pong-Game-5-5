@@ -1515,6 +1515,7 @@ GameObject:
   - component: {fileID: 1406057182}
   - component: {fileID: 1406057184}
   - component: {fileID: 1406057181}
+  - component: {fileID: 1406057185}
   m_Layer: 0
   m_Name: RacketPlayer1
   m_TagString: Untagged
@@ -1630,6 +1631,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.99999994}
   m_EdgeRadius: 0
+--- !u!114 &1406057185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406057179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5508e01386bd3b1429fc0545274e7cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1525230222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,9 +2019,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee788a8835b15a429fa7a72de5f28d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
-  extraSpeedPerHit: 0
-  maxExtraSpeed: 0
+  movementSpeed: 400
+  extraSpeedPerHit: 50
+  maxExtraSpeed: 1000
 --- !u!23 &1812583263
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2068,9 +2081,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.001
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
