@@ -1001,6 +1001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 875877083}
+  - component: {fileID: 875877084}
   m_Layer: 0
   m_Name: Field
   m_TagString: Untagged
@@ -1025,6 +1026,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &875877084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875877082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9426651a9d3bc6c44bd13241a30db892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreTextPlayer1: {fileID: 1962278055}
+  scoreTextPlayer2: {fileID: 400001291}
+  goalToWin: 5
 --- !u!1 &987154088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1054,7 @@ GameObject:
   - component: {fileID: 987154091}
   - component: {fileID: 987154093}
   - component: {fileID: 987154090}
+  - component: {fileID: 987154094}
   m_Layer: 0
   m_Name: RacketPlayer2
   m_TagString: Untagged
@@ -1079,7 +1096,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!23 &987154091
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1153,6 +1170,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.99999994}
   m_EdgeRadius: 0
+--- !u!114 &987154094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987154088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db27d37df9247d6488e28289f07e9d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 100
 --- !u!1 &1066823472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,7 +1587,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!23 &1406057182
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1643,6 +1673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5508e01386bd3b1429fc0545274e7cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 100
 --- !u!1 &1525230222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,6 +2017,7 @@ GameObject:
   - component: {fileID: 1812583266}
   - component: {fileID: 1812583265}
   - component: {fileID: 1812583262}
+  - component: {fileID: 1812583267}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -2089,7 +2121,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1812583266
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2116,6 +2148,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1812583267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812583260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a43e62d0133332446885698e2e445b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballMovement: {fileID: 1812583262}
+  scoreController: {fileID: 875877084}
 --- !u!1 &1962278055
 GameObject:
   m_ObjectHideFlags: 0

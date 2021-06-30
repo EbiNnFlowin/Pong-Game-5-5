@@ -17,7 +17,7 @@ public class BallMovement : MonoBehaviour
     }
 
     public IEnumerator StartBall(bool isStartingPlayer1 = true) {
-
+        this.PositionBall(isStartingPlayer1);
         this.hitCounter = 0;
         yield return new WaitForSeconds(2);
         if (isStartingPlayer1) {
@@ -28,6 +28,14 @@ public class BallMovement : MonoBehaviour
         
     }
 
+    public void IncreaseHitCounter()
+    {
+        if (this.hitCounter * this.extraSpeedPerHit <= this.maxExtraSpeed)
+        {
+            this.hitCounter++;
+        }
+    }
+
     public void MoveBall(Vector2 dir)
     {
         dir = dir.normalized;
@@ -36,6 +44,20 @@ public class BallMovement : MonoBehaviour
 
         Rigidbody2D rigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
 
-        rigidbody2D.velocity = dir * speed * Time.deltaTime;
+        rigidbody2D.velocity = dir * speed;
+    }
+
+    void PositionBall(bool isStartingPlayer1)
+    {
+        this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+
+        if (isStartingPlayer1)
+        {
+            this.gameObject.transform.localPosition = new Vector3(-100, 0, 0);
+        }
+        else
+        {
+            this.gameObject.transform.localPosition = new  Vector3(100, 0, 0);
+        }
     }
 }
