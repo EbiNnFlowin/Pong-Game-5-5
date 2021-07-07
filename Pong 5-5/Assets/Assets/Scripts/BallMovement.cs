@@ -60,4 +60,7 @@ public class BallMovement : MonoBehaviour
             this.gameObject.transform.localPosition = new  Vector3(100, 0, 0);
         }
     }
+
+
+
 }
